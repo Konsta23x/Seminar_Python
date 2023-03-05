@@ -8,3 +8,21 @@
 #     1 2 3 4 5
 #     6
 #     -> 5
+
+import random
+list = []
+n = int(input('Введите длину массива: '))
+for i in range(n):
+    list.append(random.randint(1, n))
+print(list)
+
+X = int(input('Введите число X, с которым необходимо сравнивать элементы списка: '))
+min = abs(X - list[0])
+index = 0
+for i in range(1, n):
+        count = abs(X - list[i])
+        if count < min:
+            min = count
+            index = i
+print(f'Число {list[index]} в списке list наиболее близко по величине к числу {X}, их разница составляет {abs(X - list[index])}')
+        
