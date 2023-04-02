@@ -10,7 +10,6 @@ if not path.exists(file_base):
 
 
 def read_records():
-    """РЎС‡РёС‚С‹РІР°РЅРёРµ РґР°РЅРЅС‹С… РёР· Р±Р°Р·С‹"""
 
     global all_data, last_id
 
@@ -23,7 +22,6 @@ def read_records():
 
 
 def show_all():
-    """РћС‚РѕР±СЂР°Р¶РµРЅРёРµ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ Р±Р°Р·С‹ РґР°РЅРЅС‹С…"""
 
     if not all_data:
         print("Empty data")
@@ -32,7 +30,6 @@ def show_all():
 
 
 def add_new_contact():
-    """Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё"""
 
     global last_id
 
@@ -53,7 +50,6 @@ def add_new_contact():
 
 
 def del_contact():
-    """РЈРґР°Р»РµРЅРёРµ Р·Р°РїРёСЃРё"""
 
     global all_data
 
@@ -72,7 +68,6 @@ def del_contact():
 
 
 def change_contact(data_tuple):
-    """РР·РјРµРЅРµРЅРёРµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµР№ Р·Р°РїРёСЃРё"""
 
     global all_data
     symbol = "\n"
@@ -103,11 +98,6 @@ def search_contact():
 
 
 def exist_contact(rec_id, data):
-    """РџСЂРѕРІРµСЂРєР° Р·Р°РїРёСЃРё РІ Р±Р°Р·Рµ
-
-    :type data: РїСЂРѕРІРµСЂРєР° Р·Р°РїРёСЃРё
-    :type rec_id: РїСЂРѕРІРµСЂРєР° id
-    """
 
     if rec_id:
         candidates = [i for i in all_data if rec_id in i.split()[0]]
@@ -117,7 +107,6 @@ def exist_contact(rec_id, data):
 
 
 def data_collection(num):
-    """РџСЂРѕРІРµСЂРєР° РїРѕР»СѓС‡РµРЅРЅС‹С… РґР°РЅРЅС‹С…"""
 
     answer = input(f"Enter a {num}: ")
     while True:
@@ -136,7 +125,6 @@ def data_collection(num):
 
 
 def main_menu():
-    """РћСЃРЅРѕРІРЅРѕРµ РјРµРЅСЋ"""
 
     play = True
     while play:
@@ -171,7 +159,6 @@ def main_menu():
 
 
 def edit_menu():
-    """РњРµРЅСЋ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ"""
 
     add_dict = {"1": "surname", "2": "name", "3": "patronymic", "4": "phone number"}
 
@@ -199,7 +186,6 @@ def edit_menu():
 
 
 def exp_bd(name):
-    """РЎРѕС…СЂР°РЅРµРЅРёРµ РґР°РЅРЅС‹С… РІ РЅРѕРІС‹Р№ С„Р°Р№Р»"""
 
     symbol = "\n"
 
@@ -218,7 +204,6 @@ def ipm_bd(name):
 
 
 def exp_imp_menu():
-    """РњРµРЅСЋ СЌРєСЃРїРѕСЂС‚Р°/РёРјРїРѕСЂС‚Р°'"""
 
     while True:
         print("\nExp/Imp menu:")
